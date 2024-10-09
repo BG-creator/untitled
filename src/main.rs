@@ -2,10 +2,37 @@ use std::io;
 use std::cmp::Ordering;
 
 fn main() {
-    convert_farengeit_to_c()
+    fibonacci()
 
 }
+fn fibonacci() {
+    let mut fib0 = 0;
+    let mut fib1 = 1;
+    let mut fib = 0;
 
+    for i in (0..25){
+        if i == fib0{
+            println!("{}", fib0);
+        }
+
+        else if i == fib1{
+            println!("{}", fib1);
+        }
+
+        else {
+            fib = fib0 + fib1;
+            println!("{} {}", fib, fib1);
+            fib0 = fib1;
+            fib1 = fib;
+
+
+
+
+        }
+    }
+
+
+}
 fn convert_farengeit_to_c(){
     println!("farengeit to c");
 
